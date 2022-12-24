@@ -1,0 +1,78 @@
+﻿@using Seyahat_sitesi.Models.sınıflar;
+@model List<Hakkımızda>
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+       <!-- mvc yapımızda listelemek için genellikle foreach döngünü kullanırız-->
+
+
+<body class="main-layout">
+
+    <div class="loader_bg">
+
+        <div class="loader"><img src="~/web/images/loading.gif" alt="#" /></div>
+
+    </div>
+
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <ul>
+                            <li style="font-family:Candara;font-size:70px">Hakkımızda</li>
+                        </ul>
+                        <div>  <img src="~/image/aboutImg_1.jpg" width="1100" height="1700">   </div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li style="font-family:Candara;font-size:15px">
+                                <div>
+                                    2007 Temmuz sonu üretime alınan dördüncü etap 80 dönümlük plastik sera sonrasında fide yetiştirme üniteleri ile kapalı alan 320 dönüme ulaştı. Agrobay, üretim yapılan kapalı alan büyüklüğü ile sadece Ortadoğu, Balkanlar ve Türkiye'nin değil aynı zamanda ısıtması jeotermal kaynaklarla sağlanan tek merkezde bu büyüklükte Avrupa'nın en büyük serasıdır.
+
+                                    Tohumundan çelik konstrüksiyonuna, ısıtma, soğutma, havalandırma, sulama, motor ve donanımlarına kadar herşey söz sahibi ülkelerden ithal edilmiştir. Yatırımımız hem bölgesinde hem de Avrupa'da kendinden söz ettirecek büyüklüğe ulaştı.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="myCarousel" class="carousel slide about_Carousel " data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                        @Html.Action("Partialhakkımızda", "About")
+
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="~/web/js/popper.min.js"></script>
+    <script src="~/web/js/bootstrap.bundle.min.js"></script>
+    <script src="~/web/js/jquery-3.0.0.min.js"></script>
+
+    <script src="~/web/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/web/js/custom.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+﻿@using Seyahat_sitesi.Models.sınıflar
+@model List<AnaSayfa>
+<div class="three_box">
+
+
+    <div class="container">
+       
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+
+                <div class="col-md-4">
+                    <div class="box_text">
+
+                        <figure><img src="@item.FotoURL" alt="#" /></figure>
+                    </div>
+                </div>
+            }
+            </div>
+        
+    </div>
+</div>

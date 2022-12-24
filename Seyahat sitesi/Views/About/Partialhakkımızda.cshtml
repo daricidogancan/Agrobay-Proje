@@ -1,0 +1,32 @@
+﻿@using Seyahat_sitesi.Models.sınıflar
+@model List<Hakkımızda>
+ 
+
+
+
+<div class="carousel-inner">
+    @Html.Action("PartialHakkımızda2", "About")
+
+
+    @foreach (var x in Model)
+    {
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="test_box">
+                                <i><img src="~/web/images/tes1.png" alt="#" /></i>
+                                <h4>@x.Baslık</h4>
+                                <p>@x.Acıklama</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
